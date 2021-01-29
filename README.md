@@ -40,7 +40,7 @@ The location of the property was one of the most important factor when determini
 Analising more data we discover that having a renovated property significantly raised the average property price. Basement was a significant feature as well, but not as much as renovation.
 
 
-![bsmn_renow](images/basement_renov.png)<br>
+![bsmn_renow](basement_renov.png)<br>
 
 Properties with condition 4 and 5 had lower average price than properties with conditions 3 and 5.
 
