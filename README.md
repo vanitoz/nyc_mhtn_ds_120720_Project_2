@@ -17,7 +17,7 @@ This project will utilize multiple regression analysis to predict housing prices
     ├── scaler.pickle                       # scaler to the data
     ├── model.pickle                        # final regression models pickle
     ├── kc_house_data_test_features.csv     # test set of data for prediction
-    ├── kc_house_data_train.csv         # train set of data to create a model
+    ├── kc_house_data_train.csv           # train set of data to create a model
     └── README.md
 
 ## Business Problem
