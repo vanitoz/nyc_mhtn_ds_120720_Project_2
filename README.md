@@ -12,6 +12,7 @@ This project will utilize multiple regression analysis to predict housing prices
     .
     ├── main.ipynb                          # main program notebook, model implementation
     ├── eda.ipynd	                        # project notebook with EDA and model creation
+    ├── utils.py                            # function used in main and eda module
     ├── housing_preds_ivan.csv              # project resukts (predictions for kc_house_data_test_features.csv)
     ├── images                              # project image/graph files
     ├── scaler.pickle                       # scaler to the data
