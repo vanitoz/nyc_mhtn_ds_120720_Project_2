@@ -2,18 +2,26 @@
 # King County Housing Price Prediction
 ![seattle](images/seattle_img.jpg)
 
+## Overview
 
+The pandemic has certainly affected every sector but residential real estate has been very resilient. The real estate sector has also been highly supportive of the economic recovery of the country so far. It has emerged as a pillar of support for the economy. 2020 was a record-breaking year for the US housing market. According to Zillow, in total, 5.64 million homes were sold in 2020, up 5.6% from 2019. Buyers have to face more competition and act more quickly than usual to snag their dream home. That's how hot the real estate market has been throughout the pandemic. Thankful for technologies, nowadays, we are able to create the models that will predict the price of a house given certain features such as geolocation, squre feet of living, size of basement, school rate of region etc.
 
+This project will utilize multiple regression analysis to predict housing prices in King County, Seattle, WA. The training data will be explored for feature building and the final model will be built and trained by SciKit python library. The data and project scope was provide by Flatiron School for Data Science Immersive program phase 2 final project. 
 
+## Repository Structure
+    .
+    ├── main.ipynb                          # main program notebook, model implementation
+    ├── eda.ipynd	                    # project notebook with EDA and model creation
+    ├── housing_preds_ivan.csv              # project resukts (predictions for kc_house_data_test_features.csv)
+    ├── images                              # project image/graph files
+    ├── scaler.pickle                       # scaler to the data
+    ├── model.pickle                        # final regression models pickle
+    ├── kc_house_data_test_features.csv     # test set of data for prediction
+    ├── kc_house_data_train.csv     	    # train set of data to create a model
+    └── README.md
 
-
-
-
-
-
-
-
-
+## Business Problem
+Predict housing prices using contectual data in Kings County, Seattle, WA
 
 
 
