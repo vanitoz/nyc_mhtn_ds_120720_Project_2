@@ -7,8 +7,13 @@ from scipy.stats import norm
 import seaborn as sns
 import matplotlib.pyplot as plt
 from geopy.distance import distance
+from statsmodels.formula.api import ols
+import statsmodels.api as sm
 
 
+import scipy.stats as scs
+from scipy.stats import norm
+import math
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn import metrics
@@ -349,6 +354,8 @@ def scale_fit_pickle_origin(df_features, target):
     
     return lm_final
 
+
+
 def diff_two_means(sample1, sample2, threshold):
     
     x1_m = sample1['price'].mean()
@@ -366,10 +373,10 @@ def diff_two_means(sample1, sample2, threshold):
     numer = (x1_m- x2_m) - 0
     denum = math.sqrt((x1_s**2/n1)+(x2_s**2/n2))
     delta_mu = numer/denum
-    print(numer)
+    
     
     p = 1 - scs.t.cdf(delta_mu, df=df) 
-    print(p)
+    
     if delta_mu > t_crit or delta_mu < - t_crit :
         
         return print("""
@@ -382,3 +389,36 @@ def diff_two_means(sample1, sample2, threshold):
         There is not enough evidence to reject the null Hypotesys because based one statistical test
         two groups sample means difference is = {}, which does not get in rejection area defined by critical values {} and -{}.
         """.format(round(delta_mu,2),round(t_crit,2),round(t_crit,2)))
+    
+    
+    
+    def anova_test(df, variable, threshold):
+        """
+        params : df - dataframe 
+                 variable - String / collumn name in data
+                 trashold - integer as pct. confidance. level
+        """
+        alpha = round(1-threshold/100,2)
+        # t_crit = scs.t.ppf(alpha, df=len(df)-1)
+        # fit the model / can yopu predict a phys_halth based on state
+        anova_states = ols('{}~condition'.format(variable), data=df).fit()
+        anova_table = sm.stats.anova_lm(anova_states, type=2)
+        # print(anova_table)
+        f_score = round(anova_table['F']['condition'],2)
+        # lets check what is the probability to get f_score or biger
+        pr = anova_table['PR(>F)']['condition'] 
+
+        if pr < alpha:
+
+            return print( """
+            We reject the null Hypotesys because the test statistic falls in the rejection area.
+            Based one statistical test our value pr = {}, which smaller then trashold = {}.
+            """.format(pr,alpha))
+
+        else:
+
+            return print("""
+            There is not enough evidence to reject the null Hypotesys because the test statistic does not fall in the rejection area.
+            Based one statistical test our value pr = {}, which way smaller then trashold = {}.
+            Another way we couldn't conclude that there is relationship between state and phys_health of patients. 
+                        """.format(pr,alpha))
