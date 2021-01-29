@@ -21,7 +21,7 @@ This project will utilize multiple regression analysis to predict housing prices
     └── README.md
 
 ## Business Problem
-Predict housing prices using contectual data in Kings County, Seattle, WA
+Predict housing prices using contectual data in Kings County, Seattle, WA. Having an accurate sales prediction will aid in strategizing the investment options to maximize profit of realstate company that interesting into this model. A multiple linaer regression model will be built base on provided property data for this task.
 
 
 
