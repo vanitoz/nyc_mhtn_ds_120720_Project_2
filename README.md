@@ -34,7 +34,17 @@ Predict housing prices using contextual data in King County, specifically around
 
 ## Analisis
 The location of the property was one of the most important factor when determining the property value. It was found that the properties located closer to downtown got hihjer average price.<br>
-![rich neighborhoods](images/dist_dntwn.png)<br>
+
+![dist_dntwn](images/dist_dntwn.png)<br>
+
+Analising more data we discover that having a renovated property significantly raised the average property price. Basement was a significant feature as well, but not as much as renovation.
+
+![bsmn_renow](images/basement_renov.png)<br>
+
+Properties with condition 4 and 5 had lower average price than properties with conditions 3 and 5.
+
+![Condition](images/cond_score.png)<br>
+
 
 
 # Kings County Housing Bake-off
