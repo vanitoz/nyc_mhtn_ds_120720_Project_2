@@ -11,13 +11,13 @@ This project will utilize multiple regression analysis to predict housing prices
 ## Repository Structure
     .
     ├── main.ipynb                          # main program notebook, model implementation
-    ├── eda.ipynd	                    # project notebook with EDA and model creation
+    ├── eda.ipynd	                       # project notebook with EDA and model creation
     ├── housing_preds_ivan.csv              # project resukts (predictions for kc_house_data_test_features.csv)
     ├── images                              # project image/graph files
     ├── scaler.pickle                       # scaler to the data
     ├── model.pickle                        # final regression models pickle
     ├── kc_house_data_test_features.csv     # test set of data for prediction
-    ├── kc_house_data_train.csv     	    # train set of data to create a model
+    ├── kc_house_data_train.csv     	  # train set of data to create a model
     └── README.md
 
 ## Business Problem
