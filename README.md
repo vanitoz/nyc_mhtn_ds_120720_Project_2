@@ -21,10 +21,30 @@ This project will utilize multiple regression analysis to predict housing prices
     └── README.md
 
 ## Business Problem
-Predict housing prices using contectual data in Kings County, Seattle, WA. Having an accurate sales prediction will aid in strategizing the investment options to maximize profit of realstate company that interesting into this model. A multiple linaer regression model will be built base on provided property data for this task.
+Predict housing prices using contextual data in King County, specifically around Seattle, WA. The aim is to generate accurate sale predictions and will aid in strategizing the investment options to maximize profit for real estate companies that are interested in use this model. The multiple linear regression model will be used as the basis with provided property data for this task.
+
+## Approach
+
+1. Check for data completeness and integrity
+2. Perform EDA with statistical analysis to determine statistically significant features
+3. Visualize statistically significant features
+4. Engineer new features based on stastistical findings
+5. Model Linear Regression models and evaluate each model for final implementation
+6. Implement feature engineering and final model to the data set. 
+
+## Analisis
+The location of the property was one of the most important factor when determining the property value. It was found that the properties located closer to downtown got hihjer average price.<br>
+
+![dist_dntwn](images/dist_dntwn.png)<br>
+
+Analising more data we discover that having a renovated property significantly raised the average property price. Basement was a significant feature as well, but not as much as renovation.
 
 
+![bsmn_renow](images/basement_renov.png)<br>
 
+Properties with condition 4 and 5 had lower average price than properties with conditions 3 and 5.
+
+![Condition](images/cond_score.png)<br>
 
 
 
