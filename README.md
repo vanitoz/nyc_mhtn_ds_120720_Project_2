@@ -10,15 +10,11 @@ This project will utilize multiple regression analysis to predict housing prices
 
 ## Repository Structure
     .
-    ├── main.ipynb                          # main program notebook, model implementation
-    ├── eda.ipynd	                        # project notebook with EDA and model creation
-    ├── utils.py                            # function used in main and eda module
-    ├── housing_preds_ivan.csv              # project resukts (predictions for kc_house_data_test_features.csv)
+    ├── Data                                # data folder
+    ├── eda.ipynd	                        # project notebook with EDA and model implementation
     ├── images                              # project image/graph files
-    ├── scaler.pickle                       # scaler to the data
-    ├── model.pickle                        # final regression models pickle
-    ├── kc_house_data_test_features.csv     # test set of data for prediction
-    ├── kc_house_data_train.csv             # train set of data to create a model
+    ├── pickle                              # final regression models pickle
+    ├── modules                             # main modules of the project
     └── README.md
 
 ## Business Problem
@@ -33,7 +29,7 @@ Predict housing prices using contextual data in King County, specifically around
 5. Model Linear Regression models and evaluate each model for final implementation
 6. Implement feature engineering and final model to the data set. 
 
-## Analisis
+## Analysis
 The location of the property was one of the most important factor when determining the property value. It was found that the properties located closer to downtown got hihjer average price.<br>
 
 ![dist_dntwn](images/dist_dntwn.png)<br>
